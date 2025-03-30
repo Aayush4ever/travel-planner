@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary</title>
+    <link rel="stylesheet" href="css/travelItinerary.css">
+
+</head>
+<script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <h1>Travel Planner</h1>
+            <nav class="nav-links">
+                <a href="dashboard.html">Home</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="profile.html" class="btn-profile">Profile</a>
+                <a href="#" id="logout-link" class="btn-logout" onclick="logout()">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="form-section">
+            <h2>Manage Your Travel Plans</h2>
+            <p>Click on the cards to add flight, hotel, or trip details.</p>
+
+            <div class="dashboard-container">
+                <!-- Flight Details Card -->
+                <div class="card" onclick="openModal('flightModal')">
+                    <h3>Flight Details</h3>
+                    <p>Add your flight details.</p>
+                    <a href="#" class="btn">Add Flight</a>
+                </div>
+
+                <!-- Hotel Details Card -->
+                <div class="card" onclick="openModal('hotelModal')">
+                    <h3>Hotel Details</h3>
+                    <p>Add your hotel details.</p>
+                    <a href="#" class="btn">Add Hotel</a>
+                </div>
+
+                <!-- Trip Details Card -->
+                <div class="card" onclick="openModal('tripModal')">
+                    <h3>Trip Details</h3>
+                    <p>Add your trip details.</p>
+                    <a href="#" class="btn">Add Trip</a>
+                </div>
+            </div>
+
+            <div id="flight-details-container">
+                <h3>Your Flights</h3>
+                <ul id="flight-list"></ul> 
+            </div>
+
+            <div id="hotel-details-container">
+                <h3>Your Hotels</h3>
+                <ul id="hotel-list"></ul> 
+            </div>
+
+            <div id="trip-details-container">
+                <h3>Your Trips</h3>
+                <ul id="trip-list"></ul> 
+            </div>
+        </section>
+    </main>
+
+   
+    <!-- Flight Form Modal -->
+    <div id="flightModal" class="form-modal">
+        <div class="form-modal-content">
+            <span class="close-btn" onclick="closeModal('flightModal')">&times;</span>
+            <h3>Add Flight Details</h3>
+            <form>
+                <label>PNR:</label>
+                <input type="text" placeholder="Enter PNR" required>
+
+                <label>Arrival Time:</label>
+                <input type="time" required>
+
+                <label>Departure Time:</label>
+                <input type="time" required>
+
+                <label>Date:</label>
+                <input type="date" required>
+
+                <label>From:</label>
+                <input type="text" placeholder="Enter Departure City" required>
+
+                <label>To:</label>
+                <input type="text" placeholder="Enter Destination City" required>
+
+                <button type="submit">Save Flight</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="hotelModal" class="form-modal">
+        <div class="form-modal-content">
+            <span class="close-btn" onclick="closeModal('hotelModal')">&times;</span>
+            <h3>Add Hotel Details</h3>
+            <form id="hotelForm">
+                <label>Hotel Name:</label>
+                <input type="text" placeholder="Enter Hotel Name" required>
+
+                <label>Check-in Date:</label>
+                <input type="date" required>
+
+                <label>Check-out Date:</label>
+                <input type="date" required>
+
+                <label>Location:</label>
+                <input type="text" placeholder="Enter Location" required>
+
+                <label>Booking Reference:</label>
+                <input type="text" placeholder="Enter Booking Reference" required>
+
+                <button type="submit">Save Hotel</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="tripModal" class="form-modal">
+        <div class="form-modal-content">
+            <span class="close-btn" onclick="closeModal('tripModal')">&times;</span>
+            <h3>Add Trip Details</h3>
+            <form id="tripForm">
+                <label>Trip Name:</label>
+                <input type="text" placeholder="Enter Trip Name" required>
+
+                <label>Start Date:</label>
+                <input type="date" required>
+
+                <label>End Date:</label>
+                <input type="date" required>
+
+                <label>Destination:</label>
+                <input type="text" placeholder="Enter Destination" required>
+
+                <label>Notes:</label>
+                <textarea placeholder="Additional notes"></textarea>
+
+                <button type="submit">Save Trip</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2025 Travel Planner. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="js/plans.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+
+</html>

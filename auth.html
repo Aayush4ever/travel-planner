@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="navbar">
+  <a href="index.html"><h1>Travel Planner</h1></a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="auth.html">Sign Up</a>
+    <a href="auth.html">Login</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<main class="main-container">
+  <div class="auth-wrapper">
+    
+    <div class="auth-image">
+      <img src="images/trip-auth.jpg" alt="Travel Image">
+    </div>
+
+    <section class="form-section">
+      <h2>Welcome to Travel Planner</h2>
+      <p>Plan, track, and manage your travel itinerary effortlessly.</p>
+
+      <div id="auth-container">
+        <!-- Signup Form -->
+        <div id="signup-form" class="form-box">
+          <h3>Sign Up</h3>
+          <div class="input-group">
+            <input type="email" id="signup-email" placeholder="Email" required>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-password" placeholder="Password" required>
+          </div>
+          <button onclick="signup()">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form-box">
+          <h3>Login</h3>
+          <div class="input-group">
+            <input type="email" id="login-email" placeholder="Email" required>
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" placeholder="Password" required>
+          </div>
+          <button onclick="login()">Login</button>
+        </div>
+      </div>
+
+      <p id="error-message"></p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © 2025 Travel Planner. All rights reserved.
+</footer>
+
+<script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+<script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

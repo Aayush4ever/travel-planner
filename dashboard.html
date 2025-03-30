@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">  
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <h1>Travel Planner</h1>
+
+    <nav class="nav-links">
+      <a href="dashboard.html">Home</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="profile.html">Profile</a>
+      <a href="#" id="logout-link" class="btn-logout" onclick="logout()">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main-container">
+  <section class="form-section">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Manage your travel plans effortlessly!</p>
+
+    <div class="dashboard-container">
+      <div class="card">
+        <img src="images/trip.jpeg" alt="Travel Itinerary">
+        <h3>Travel Itinerary </h3>
+        <p>View and manage your saved travel plans.</p>
+        <a href="travelItinerary.html" class="btn">View Itineraries</a>
+      </div>
+
+      <div class="card">
+        <img src="images/expanse.jpeg" alt="Expense Tracker">
+        <h3>Expense Tracker</h3>
+        <p>Track and manage your travel expenses.</p>
+        <a href="expenses.html" class="btn">Track Expenses</a>
+      </div>
+
+      <div class="card">
+        <img src="images/packing.jpg" alt="Packing List">
+        <h3>Packing List</h3>
+        <p>Create and organize your packing lists.</p>
+        <a href="packing.html" class="btn">Manage Packing</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Travel Planner. All Rights Reserved.</p>
+</footer>
+
+<script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+<script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

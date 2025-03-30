@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Travel Planner</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+          <h1>Travel Planner</h1>
+      
+          <!-- Navigation links -->
+          <nav class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="profile.html" id="profile-link" class="btn-profile">Profile</a>
+            <a href="#" id="logout-link" class="btn-logout" onclick="logout()">Logout</a>
+          </nav>
+        </div>
+    </header>
+
+    <main class="feedback-container">
+        <h2>Leave Your Feedback</h2>
+        <p>Your feedback helps us improve our services!</p>
+
+        <form id="feedback-form">
+            <input type="text" id="feedback-name" placeholder="Your Name" required>
+            <textarea id="feedback-text" placeholder="Write your feedback here..." required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p id="feedback-message" class="hidden">Thank you for your feedback!</p>
+
+
+        <h2>Recent Feedback</h2>
+        <div id="feedback-list" class="testimonial-container"></div>
+    </main>
+
+    <script type="module" src="js/feedback.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

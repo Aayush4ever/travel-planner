@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/feedback.css">
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html"><h1>Travel Planner</h1></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="auth.html">Sign Up</a>
+      <a href="auth.html">Login</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header> 
+
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Plan Your Perfect Trip</h1>
+      <p>Organize your travel plans with ease. From flights and hotels to activities and expenses, manage everything in one place.</p>
+      <button>Start Planning</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/idexTrip.jpg" alt="Travel Planning">
+    </div>
+  </main>
+
+  <section id="features" class="features">
+    <h2>What We Offer</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="images/flight.png" alt="Flights">
+        <h3>Flight Management</h3>
+        <p>Track your flight bookings and get real-time updates.</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/hotel.png" alt="Hotels">
+        <h3>Hotel Booking</h3>
+        <p>Find and manage hotel reservations for a comfortable stay.</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/expenses.png" alt="Expenses">
+        <h3>Expense Tracker</h3>
+        <p>Keep track of your travel expenses and stay on budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>User Reviews</h2>
+    <div id="feedback-list" class="testimonial-container"></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to us and we’ll be happy to help.</p>
+    <a href="mailto:support@travelplanner.com" class="contact-btn">Email Us</a>
+  </section>
+
+  <footer>
+    © 2025 Travel Planner. All rights reserved.
+  </footer>
+
+  <script type="module" src="js/feedback.js"></script>
+</body>
+</html>
